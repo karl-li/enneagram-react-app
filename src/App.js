@@ -1,24 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
+import logo from './9arch-logo.svg';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <header><img src={logo} width="32"/></header>
+      <h1>9 Archetypes</h1>
+      <h2>What is the Enneagram?</h2>
+      <p>The Enneagram is a 9-sided figure that represents 9 different personas. It is a profound tool for self-discovery and illuminating your true self.</p>
+      <button>Take the test</button>
+      <h2>The 9 Archetypes</h2>
     </div>
   );
 }
