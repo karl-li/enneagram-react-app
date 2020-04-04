@@ -1,5 +1,12 @@
+.container {
+  max-width: 960px;
+  display: grid;
+  margin: auto;
+}
 body {
   font-family: "Work Sans", Arial, Helvetica, sans-serif;
+  text-align: center;
+  background-color: #F5F5F5;
 }
 .App {
   text-align: center;
@@ -41,11 +48,55 @@ body {
 }
 
 button {
-  font-size: 1rem;
+  font-size: 20px;
   color: white;
   font-weight: bold;
   background-color: black;
-  border-radius: 30px;
+  border-radius: 40px;
   border: solid black;
-  padding: 16px;
+  padding: 24px;
+  max-width: 300px;
+  margin: auto;
+  margin-top: 24px;
+}
+
+.nav h1, img {
+  float: left;
+  padding: 14px 16px;
+  margin: 0px;
+}
+.nav h1 {
+  padding: 10px;
+}
+.icon-menu {
+  float: right;
+}
+
+footer {
+  text-align: center;
+}
+
+.hero {
+  display: grid;
+  background: #D4AF37;
+  padding: 24px;
+  color: white;
+}
+
+.hero h2 {
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+  margin: 0px;
+  margin-bottom: 16px;
+}
+.hero p {
+  max-width: 720px;
+  margin: auto;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.heroImg {
+  margin: auto;
 }
