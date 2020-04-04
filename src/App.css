@@ -1,3 +1,6 @@
+body {
+  font-family: "Work Sans", Arial, Helvetica, sans-serif;
+}
 .App {
   text-align: center;
 }
@@ -35,4 +38,14 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+button {
+  font-size: 1rem;
+  color: white;
+  font-weight: bold;
+  background-color: black;
+  border-radius: 30px;
+  border: solid black;
+  padding: 16px;
 }
