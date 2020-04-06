@@ -1,13 +1,14 @@
 .container {
   max-width: 960px;
-  display: grid;
   margin: auto;
 }
 body {
   font-family: "Work Sans", Arial, Helvetica, sans-serif;
+  font-size: 18px;
   text-align: center;
   background-color: #F5F5F5;
 }
+
 .App {
   text-align: center;
 }
@@ -54,10 +55,27 @@ button {
   background-color: black;
   border-radius: 40px;
   border: solid black;
-  padding: 24px;
+  padding: 16px 24px;
+  width: 250px;
   max-width: 300px;
   margin: auto;
   margin-top: 24px;
+  cursor: pointer;
+}
+
+button:hover {
+background-color: #2c2c2c;
+border: solid #2c2c2c;
+}
+
+button a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav {
+  height: 60px;
+  border-bottom: 1px solid #2c2c2c;
 }
 
 .nav h1, img {
@@ -68,19 +86,27 @@ button {
 .nav h1 {
   padding: 10px;
 }
+
+.nav a {
+  text-decoration: none;
+  color: #2c2c2c;
+}
 .icon-menu {
   float: right;
 }
 
 footer {
+  border-top: 1px solid #2c2c2c; 
   text-align: center;
+  padding: 16px;
 }
 
 .hero {
-  display: grid;
   background: #D4AF37;
   padding: 24px;
   color: white;
+  margin: auto;
+  border-bottom: 1px solid #2c2c2c; 
 }
 
 .hero h2 {
@@ -99,4 +125,27 @@ footer {
 
 .heroImg {
   margin: auto;
+  display: block;
+  float: none;
+}
+
+.cards {
+  height: 100vh;
+}
+
+.instructions {
+  text-align: initial;
+  height: 100vh;
+  margin-left: 24px;
+  margin-right: 24px;
+  margin-top: 24px;
+}
+
+.test-instruction-header {
+  margin: 0px;
+  background: #D4AF37;
+  padding: 24px;
+  color: white;
+  text-align: initial;
+  border-bottom: 1px solid #2c2c2c; 
 }
