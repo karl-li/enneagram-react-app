@@ -4,8 +4,32 @@ import { Link } from "react-router-dom";
 
 class Test extends Component {
     state = {
-        selectedOption: "option1"
+        type1: 0,
+        type2: 0,
+        type3: 0,
+        type4: 0,
+        type5: 0,
+        type6: 0,
+        type7: 0,
+        type8: 0,
+        type9: 0
     }
+
+    handleFormSubmit = formSubmitEvent => {
+      formSubmitEvent.preventDefault();
+      console.log("You have submitted:", formSubmitEvent);
+    };
+
+    displayAlert = () => {
+      alert('heres the state: ' + JSON.stringify(this.state));
+    };
+
+    handleOptionChange = changeEvent => {
+      this.setState({
+        type1: this.state.type1 + parseFloat(changeEvent.target.value)
+      });
+    };
+
     render() {
         return (
             <React.Fragment>
@@ -15,27 +39,33 @@ class Test extends Component {
                   <li><p>I love to take care of people and I'm good at it.</p>
                   <label>
                     <input
+                    id="1"
                     type="radio"
                     name="Q1"
                     value="0"
                     className="form-check-input"
-                    checked/>
+                    onChange={this.handleOptionChange}
+                    />
                     No
                   </label>
                   <label>
                     <input
+                    id="1"
                     type="radio"
                     name="Q1"
                     value=".34"
+                    onChange={this.handleOptionChange}
                     className="form-check-input"
                     />
                     Partly
                   </label>
                   <label>
                     <input
+                    id="1"
                     type="radio"
                     name="Q1"
                     value="1"
+                    onChange={this.handleOptionChange}
                     className="form-check-input"
                     />
                     Yes
@@ -273,6 +303,10 @@ class Test extends Component {
                     Yes
                   </label>
                   </li>
+                  <button onClick={this.displayAlert}>
+                      Submit
+                  </button>
+                  <br/>
                   <Link to="/test-results">
                     <button>
                       Next
