@@ -24,9 +24,9 @@ class Test extends Component {
       alert('heres the state: ' + JSON.stringify(this.state));
     };
 
-    handleOptionChange = changeEvent => {
+    handleOptionChange = (changeEvent, type) => {
       this.setState({
-        type1: this.state.type1 + parseFloat(changeEvent.target.value)
+        [type]: +changeEvent.target.value
       });
     };
 
@@ -39,33 +39,33 @@ class Test extends Component {
                   <li><p>I love to take care of people and I'm good at it.</p>
                   <label>
                     <input
-                    id="1"
+                    id="type1"
                     type="radio"
                     name="Q1"
                     value="0"
                     className="form-check-input"
-                    onChange={this.handleOptionChange}
+                    onChange={(event) => this.handleOptionChange(event, "type1")}
                     />
                     No
                   </label>
                   <label>
                     <input
-                    id="1"
+                    id="type1"
                     type="radio"
                     name="Q1"
                     value=".34"
-                    onChange={this.handleOptionChange}
+                    onChange={(event) => this.handleOptionChange(event, "type1")}
                     className="form-check-input"
                     />
                     Partly
                   </label>
                   <label>
                     <input
-                    id="1"
+                    id="type1"
                     type="radio"
                     name="Q1"
                     value="1"
-                    onChange={this.handleOptionChange}
+                    onChange={(event) => this.handleOptionChange(event, "type1")}
                     className="form-check-input"
                     />
                     Yes
@@ -75,27 +75,30 @@ class Test extends Component {
                   <label>
                     <input
                     type="radio"
-                    name="Q2"
+                    name="Q1"
                     value="0"
                     className="form-check-input"
-                    checked/>
+                    onChange={(event) => this.handleOptionChange(event, "type2")}
+                    />
                     No
                   </label>
                   <label>
                     <input
                     type="radio"
-                    name="Q2"
+                    name="Q1"
                     value=".34"
                     className="form-check-input"
+                    onChange={(event) => this.handleOptionChange(event, "type2")}
                     />
                     Partly
                   </label>
                   <label>
                     <input
                     type="radio"
-                    name="Q2"
+                    name="Q1"
                     value="1"
                     className="form-check-input"
+                    onChange={(event) => this.handleOptionChange(event, "type2")}
                     />
                     Yes
                   </label>
@@ -107,7 +110,8 @@ class Test extends Component {
                     name="Q3"
                     value="0"
                     className="form-check-input"
-                    checked/>
+                    onChange={(event) => this.handleOptionChange(event, "type3")}
+                    />
                     No
                   </label>
                   <label>
@@ -116,6 +120,7 @@ class Test extends Component {
                     name="Q3"
                     value=".34"
                     className="form-check-input"
+                    onChange={(event) => this.handleOptionChange(event, "type3")}
                     />
                     Partly
                   </label>
@@ -125,6 +130,7 @@ class Test extends Component {
                     name="Q3"
                     value="1"
                     className="form-check-input"
+                    onChange={(event) => this.handleOptionChange(event, "type3")}
                     />
                     Yes
                   </label>
@@ -136,7 +142,8 @@ class Test extends Component {
                     name="Q4"
                     value="0"
                     className="form-check-input"
-                    checked/>
+                    onChange={(event) => this.handleOptionChange(event, "type4")}
+                    />
                     No
                   </label>
                   <label>
@@ -145,6 +152,7 @@ class Test extends Component {
                     name="Q4"
                     value=".34"
                     className="form-check-input"
+                    onChange={(event) => this.handleOptionChange(event, "type4")}
                     />
                     Partly
                   </label>
@@ -154,6 +162,7 @@ class Test extends Component {
                     name="Q4"
                     value="1"
                     className="form-check-input"
+                    onChange={(event) => this.handleOptionChange(event, "type4")}
                     />
                     Yes
                   </label>
@@ -165,7 +174,8 @@ class Test extends Component {
                     name="Q5"
                     value="0"
                     className="form-check-input"
-                    checked/>
+                    onChange={(event) => this.handleOptionChange(event, "type5")}
+                    />
                     No
                   </label>
                   <label>
@@ -174,6 +184,7 @@ class Test extends Component {
                     name="Q5"
                     value=".34"
                     className="form-check-input"
+                    onChange={(event) => this.handleOptionChange(event, "type5")}
                     />
                     Partly
                   </label>
@@ -183,6 +194,7 @@ class Test extends Component {
                     name="Q5"
                     value="1"
                     className="form-check-input"
+                    onChange={(event) => this.handleOptionChange(event, "type5")}
                     />
                     Yes
                   </label>
@@ -194,7 +206,8 @@ class Test extends Component {
                     name="Q6"
                     value="0"
                     className="form-check-input"
-                    checked/>
+                    onChange={(event) => this.handleOptionChange(event, "type6")}
+                    />
                     No
                   </label>
                   <label>
@@ -203,6 +216,7 @@ class Test extends Component {
                     name="Q6"
                     value=".34"
                     className="form-check-input"
+                    onChange={(event) => this.handleOptionChange(event, "type6")}
                     />
                     Partly
                   </label>
@@ -212,6 +226,7 @@ class Test extends Component {
                     name="Q6"
                     value="1"
                     className="form-check-input"
+                    onChange={(event) => this.handleOptionChange(event, "type6")}
                     />
                     Yes
                   </label>
@@ -223,7 +238,8 @@ class Test extends Component {
                     name="Q7"
                     value="0"
                     className="form-check-input"
-                    checked/>
+                    onChange={(event) => this.handleOptionChange(event, "type7")}
+                    />
                     No
                   </label>
                   <label>
@@ -232,6 +248,7 @@ class Test extends Component {
                     name="Q7"
                     value=".34"
                     className="form-check-input"
+                    onChange={(event) => this.handleOptionChange(event, "type7")}
                     />
                     Partly
                   </label>
@@ -241,6 +258,7 @@ class Test extends Component {
                     name="Q7"
                     value="1"
                     className="form-check-input"
+                    onChange={(event) => this.handleOptionChange(event, "type7")}
                     />
                     Yes
                   </label>
@@ -252,7 +270,8 @@ class Test extends Component {
                     name="Q8"
                     value="0"
                     className="form-check-input"
-                    checked/>
+                    onChange={(event) => this.handleOptionChange(event, "type8")}
+                    />
                     No
                   </label>
                   <label>
@@ -261,6 +280,7 @@ class Test extends Component {
                     name="Q8"
                     value=".34"
                     className="form-check-input"
+                    onChange={(event) => this.handleOptionChange(event, "type8")}
                     />
                     Partly
                   </label>
@@ -270,6 +290,7 @@ class Test extends Component {
                     name="Q8"
                     value="1"
                     className="form-check-input"
+                    onChange={(event) => this.handleOptionChange(event, "type8")}
                     />
                     Yes
                   </label>
@@ -281,7 +302,8 @@ class Test extends Component {
                     name="Q9"
                     value="0"
                     className="form-check-input"
-                    checked/>
+                    onChange={(event) => this.handleOptionChange(event, "type9")}
+                    />
                     No
                   </label>
                   <label>
@@ -290,6 +312,7 @@ class Test extends Component {
                     name="Q9"
                     value=".34"
                     className="form-check-input"
+                    onChange={(event) => this.handleOptionChange(event, "type9")}
                     />
                     Partly
                   </label>
@@ -299,6 +322,7 @@ class Test extends Component {
                     name="Q9"
                     value="1"
                     className="form-check-input"
+                    onChange={(event) => this.handleOptionChange(event, "type9")}
                     />
                     Yes
                   </label>
